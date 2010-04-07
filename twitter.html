@@ -1,0 +1,26 @@
+I own a twitter account. I am <a href="http://twitter.com/kennydude">@kennydude</a>.
+<div id="tweet-header">
+<img class="icon" src="comment.png" />LATEST TWEETS
+</div>
+<div id="tweets">
+Loading tweets!
+</div>
+<script type="text/javascript">
+	$.getJSON('http://twitter.com/statuses/user_timeline/kennydude.json', function(data){
+		$("#tweets").text("");
+		$.each(data, function(i, item){
+			f = $("<div>", {"class" : "tweet"});
+			$("<div>", {"class":"update"}).text(item.text).appendTo(f);
+			d = $("<div>", {"class":"details"}).appendTo(f);
+			$("<a>", {"href":"http://twitter.com/kennydude/status/" + item.id}).text(
+				prettyDate(item.created_at)
+			).appendTo(d);
+			$("<a>").html(" via " + item.source).appendTo(d);
+			if(item.in_reply_to_screen_name){
+				$("<a>").text(" in reply to " + item.in_reply_to_screen_name ).appendTo(d);
+			}
+			$("<hr/>").appendTo(d);
+			f.appendTo($("#tweets"));
+		});
+	});
+</script>

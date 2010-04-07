@@ -1,0 +1,35 @@
+<img src="video.png"  class="icon" />VIDEO <a href="http://vimeo.com/kennydude">VIMEO</a> 
+<a href="http://youtube.com/kennymconrmick">YOUTUBE</a>
+<div id="videoplayer">
+Loading...
+</div>
+<div style="overflow: scroll">
+<table><tr id="videolist">
+</tr>
+</table>
+</div>
+<script type="text/javascript">
+$.getJSON("http://vimeo.com/api/v2/kennydude/all_videos.json", function(data){
+	$("#videoplayer").text("Click on a video to play it");
+	$.each(data, function(i, item){
+		v = $("<td>", {"class":"video", "width":"150px"});
+		$("<img>", {"src":item.thumbnail_small}).appendTo(v);
+		$("<br>").appendTo(v);
+		$("<b>").text(item.title).appendTo(v);
+		$("<br>").appendTo(v);
+		desc = item.description;
+		if(desc.length > 100){
+			desc = desc.substring(0, 100) + "...";
+		}
+		$("<a>").html(desc).appendTo(v);
+		v.click(function(){
+			$("#videoplayer").text("").flash({
+				height: 360,
+				width: 580,
+				src : "http://vimeo.com/moogaloop.swf?clip_id=" + item.id + "&autoplay=1"
+			});
+		});
+		v.appendTo($("#videolist"));
+	});
+});
+</script>
