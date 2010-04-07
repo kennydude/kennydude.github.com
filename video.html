@@ -9,7 +9,7 @@ Loading...
 </table>
 </div>
 <script type="text/javascript">
-$.getJSON("http://vimeo.com/api/v2/kennydude/all_videos.json", function(data){
+$.getJSON("http://vimeo.com/api/v2/kennydude/all_videos.json?callback=?", function(data){
 	$("#videoplayer").text("Click on a video to play it");
 	$.each(data, function(i, item){
 		v = $("<td>", {"class":"video", "width":"150px"});

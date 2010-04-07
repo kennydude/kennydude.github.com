@@ -6,7 +6,7 @@ I own a twitter account. I am <a href="http://twitter.com/kennydude">@kennydude<
 Loading tweets!
 </div>
 <script type="text/javascript">
-	$.getJSON('http://twitter.com/statuses/user_timeline/kennydude.json', function(data){
+	$.getJSON('http://twitter.com/statuses/user_timeline/kennydude.json?callback=?', function(data){
 		$("#tweets").text("");
 		$.each(data, function(i, item){
 			f = $("<div>", {"class" : "tweet"});
