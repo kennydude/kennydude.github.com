@@ -16,8 +16,11 @@ body{
 	border: 5px solid #333;
 	background: #CCC;
 	width: 600px;
-	min-height: 400px;
 	margin: 10px auto;
+}
+p{
+	margin: 0px;
+	padding: 5px;
 }
 hr{
 	border: none;
@@ -31,39 +34,15 @@ td{
 }
 img{
 	border: 5px solid #333;
-	margin: 10spx;
-}
-#tabs{
-	border-top: 5px solid #333;
-	padding-top: 5px;
-}
-#tabs .tab{
-	border-left: 2.5px solid #333;
-	border-right: 2.5px solid #333;
-	display: inline;
-	text-align: center;
-	padding: 5px;
-	background: #999;
-	border-bottom: 5px solid #333;
-}
-#tabs .tab.last{
-	border-right: 5px solid #333;
-}
-#tabs .tab.active{
-	background: #CCC;
-	border: none;
-}
-#frame{
-	margin-top: 10px;
-	padding: 10px;
-	background: #CCC;
-}
-#loading{
-	background: #CCC;
+	margin: 10px;
 }
 h1,h2,h3,h4{
-	margin: none;
+	margin: 0px;
 	margin-bottom: 2px;
+	background: #333;
+	color: #FFF;
+	font-size: 20px;
+	padding-left: 10px;
 }
 .video{
 	cursor: hand;
@@ -77,12 +56,13 @@ a:hover{
 }
 #header{
 	background: red;
+	border-bottom: 5px solid #333;
 	padding: 10px;
 	font-size: 15px;
 }
 img.icon{
 	border: none;
-	margin: none !important;
+	margin: 0px !important;
 	vertical-align: center;
 }
 .details{

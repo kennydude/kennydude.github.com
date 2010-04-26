@@ -2,45 +2,6 @@
 	<head>
 		<title>kennydude</title>
 		<meta name="description" content="Joe Simpson - Geek. My website. Period" />
-		<script type="text/javascript" src="jquery.js"></script>
-		<script type="text/javascript" src="jquery.flash.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function(){
-				$("#tabs .tab").click(function(){
-					$("#loading").show();
-					$("#tabs .tab").removeClass("active");
-					$(this).addClass("active");
-					console.log($("a", this).attr("href"));
-					$("#content").load($("a", this).attr("href"), function(){
-						$("#loading").hide();
-					});
-					return false;
-				});
-				$("#tabs .tab.first").click();
-			});
-			
-// Takes an ISO time and returns a string representing how
-// long ago the date represents.
-// src: http://ejohn.org/blog/javascript-pretty-date/
-function prettyDate(time){
-	var date = new Date((time || "").replace(/-/g,"/").replace(/[TZ]/g," ")),
-		diff = (((new Date()).getTime() - date.getTime()) / 1000),
-		day_diff = Math.floor(diff / 86400);
-			
-	if ( isNaN(day_diff) || day_diff < 0 || day_diff >= 31 )
-		return;
-			
-	return day_diff == 0 && (
-			diff < 60 && "just now" ||
-			diff < 120 && "1 minute ago" ||
-			diff < 3600 && Math.floor( diff / 60 ) + " minutes ago" ||
-			diff < 7200 && "1 hour ago" ||
-			diff < 86400 && Math.floor( diff / 3600 ) + " hours ago") ||
-		day_diff == 1 && "Yesterday" ||
-		day_diff < 7 && day_diff + " days ago" ||
-		day_diff < 31 && Math.ceil( day_diff / 7 ) + " weeks ago";
-}
-		</script>
 		<link rel="stylesheet" type="text/css" href="style.css" />
 	</head>
 	<body>
@@ -51,38 +12,61 @@ function prettyDate(time){
 			<div id="header">
 				<img src="star.png" class="icon" /> Joe Simpson
 			</div>
-			<div id="tabs">
-				<div class="tab first active">
-					<a href="about.html">ABOUT</a>
-				</div>
-				<div class="tab">
-					<a href="video.html">VIDEO</a>
-				</div>
-				<div class="tab">
-					<a href="twitter.html">TWITTER</a>
-				</div>
-				<div class="tab">
-					<a href="social.html">SOCIAL</a>
-				</div>
-				<div class="tab">
-					<a href="photos.html">PHOTOS</a>
-				</div>
-				<div class="tab last">
-					<a href="contact.html">CONTACT</a>
-				</div>
-			</div>
 			<div id="frame">
-				<div id="loading">
-					LOADING WEB PAGE!
-				</div>
-				<div id="content">
-				
-				</div>
+				<h1>About</h1>
+				<img src="me.png" style="float: right" title="Me">
+				<p>
+					Hello there I'm Joe. I'm basically a geeky-minded goth-looking person who resides in <a href="http://maps.google.com/places/gb/cleveland/stockton-on-tees?hl=en">Stockton-on-tees</a>. So basically I know loads about computers (I love website creation, it's lovely). I also Love some awesome tune-age. 
+				</p>
+				<p>
+					I have amazing friends who I love to bits. They are the world to me and help me get through each and every day. If you're a random person, wanting to know me. Look bellow and you'll find loads more info on them. Love you guys. &lt;3
+				</p>
+				<p>
+					I hate people who tag me with stuff like: <i>gay</i>, <b>emo</b> and <u>mosher</u>. Tagging people is really pointless unless you follow the spoon-fed cult of chavs (basically plastic clothes from JD). I don't bite though, i'm pretty friendly :D
+				</p>
+				<h1>Music</h1>
+				<p>
+					Music is my life. I love it too much. I mainly listen to metal and rock, only allowing little of much else. Rap and Rave is a definite no-no in my life, it's shit and no talent is involved. I love music with real instruments in like guitars and vocals and drums.
+				</p>
+				<p>
+					The bands I really love involve Bullet For My Valentine, Slipknot, Rammstein and loads more. I love many unsigned bands too, they are awesomeness! If you would love to see what I have been listening to recently, just click the magic Last.FM button bellow to see my profile over there!
+				</p>
+				<p>
+					<a href="http://www.last.fm/user/headbangerkenny/"><img src="http://cdn.last.fm/flatness/badges/lastfm_red_small.gif" class="icon" title="Last.FM" /></a>
+				</p>
+				<h1>Art</h1>
+				<p>
+					I love drawing, writing and move making videos with my Bloggie. I do loads of drawing and writing and that's all posted on my deviantArt account. My video is using non-copyrighted stuff, as i'm that nice to all the copyrighting people. All of my artwork is under <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons</a>, so you can copy it as long as you don't sell it (I can sue you then!)
+				</p>
+				<p>
+					<a href="http://kennyisaheadbanger.deviantart.com"><img class="icon" src="da.jpg" title="my Deviantart" /></a>
+					<a href="http://vimeo.com/kennydude"><img src="vimeo.png" class="icon" title="vimeo"> Vimeo</a>
+				</p>
+				<h1>Friends</h1>
+				<p>
+					My friends are really really really awesomeorific. They really are and help me get through every day. My friends won't tell anything I tell them not too and are a great laugh in and out of school. I even have my best friend as my '<a href="http://www.facebook.com/profile.php?id=1333537467">twin sister</a>' as we're very alike.
+				</p>
+				<p>
+					We all talk over many social networks, which include Twitter, Facebook and Myspace. If you need to contact me, please use one of the services bellow!
+				</p>
+				<p>
+					<a href="http://www.twitter.com/kennydude"><img class="icon" src="http://twitter-badges.s3.amazonaws.com/twitter-a.png" alt="Follow kennydude on Twitter"/></a>
+					<a href="http://myspace.com/kennyisaheadbanger">MYSPACE</a> <a href="http://facebook.com/headbangerkenny">Facebook (only shows up if you're my friend)</a>
+				</p>
+				<h1>Photos</h1>
+				<p>
+					I also love taking photos with my amazing Sony Bloggie. I post them to my flickr account, which is usually busting with fullness. Please use the sets to actually find something - i kinda filled the 200 for free members really easily
+				</p>
+				<p>
+					<a href="http://flickr.com/photos/kennydude">Flick<b>r</b></a>
+				</p>
+				<h1>Ask me anything!</h1>
+				<p>I have a formspring.me account!</p>
+				<p><iframe src="http://www.formspring.me/widget/view/kennydude?&size=medium&bgcolor=%23fff&fgcolor=%23333" frameborder="0" scrolling="no" width="180" height="275" style="border:none;"><a href="http://www.formspring.me/kennydude">http://www.formspring.me/kennydude</a></iframe></p>
 			</div>
 		</div>
 		<div id="footer">
-			Uses the amazing <a href="http://jquery.com">jQuery</a> framework
-			<br/>
+			Created by myself all in <a href="github.com/kennydude/kennydude.github.com">my code</a><br/>
 			Uses <a href="http://somerandomdude.com/projects/sanscons/">Sanscons by somerandomdude</a>
 		</div>
 	</body>
