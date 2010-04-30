@@ -47,6 +47,11 @@ h1,h2,h3,h4{
 .video{
 	cursor: hand;
 }
+.masked{
+	font-size: 5px;
+	background: #333;
+	color: #333;
+}
 a{
 	text-decoration: none;
 	color: #333;
