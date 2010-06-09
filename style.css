@@ -1,75 +1,39 @@
 body{
-	background: #666;
-	font-family: "Courier",  sans;
+	background: #CCC;
+	padding: 0px;
+	margin: 0px;
+	font-family: "Lucida Grande", "Lucida Sans", "Arial", sans-serif;
 }
-*{
-	font-size: 13px;
+*{font-weight:lighter;}
+#header,#links,#frame,#footer{
+	padding: 10px;
 }
 #footer{
 	text-align: center;
+}
+#links a{
 	color: #FFF;
+	text-decoration: none;
 }
-#footer a:hover{
-	color: #CCC !important;
+.masked{ font-size: 5px; background: #333; color: #666; }
+#links a:hover{
+	text-decoration: underline;
 }
-#main{
-	border: 5px solid #333;
-	background: #CCC;
-	width: 600px;
-	margin: 10px auto;
+#header, #footer{
+	background: #FF9966;
 }
-p{
-	margin: 0px;
-	padding: 5px;
+#links{
+	background: #FF3300;
 }
-hr{
-	border: none;
-	border-bottom: 1px solid #333;
+#frame{
+	padding: 10px;
 }
-table{
-	width: 100%;
-}
-td{
-	vertical-align: top;
-}
-img{
-	border: 5px solid #333;
-	margin: 10px;
-}
-h1,h2,h3,h4{
-	margin: 0px;
+h1,h3,h3{
+	margin-top: 2px;
 	margin-bottom: 2px;
-	background: #333;
-	color: #FFF;
-	font-size: 20px;
-	padding-left: 10px;
-}
-.video{
-	cursor: hand;
-}
-.masked{
-	font-size: 5px;
-	background: #333;
-	color: #333;
 }
 a{
-	text-decoration: none;
 	color: #333;
+	text-decoration: none;
 }
-a:hover{
-	color: #000;
-}
-#header{
-	background: red;
-	border-bottom: 5px solid #333;
-	padding: 10px;
-	font-size: 15px;
-}
-img.icon{
-	border: none;
-	margin: 0px !important;
-	vertical-align: center;
-}
-.details{
-	font-size: 75%;
-}
+a:hover{ color: #000; }
