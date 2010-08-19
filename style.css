@@ -1,8 +1,21 @@
 body{
-	background: #CCC;
+	background: #FFF;
 	padding: 0px;
 	margin: 0px;
-	font-family: "Lucida Grande", "Lucida Sans", "Arial", sans-serif;
+}
+#main{
+	margin: auto;
+	width: 800px;
+}
+h1,h3,h3,body{
+	font-family: 'Nobile', "Lucida Grande", "Lucida Sans", "Arial", sans-serif;
+	font-weight: 100;
+}
+h1,h2,h3{
+	margin-top: 2px;
+	margin-bottom: 2px;
+	color: #3399ff;
+	text-transform: uppercase;
 }
 *{font-weight:lighter;}
 #header,#links,#frame,#footer{
@@ -11,7 +24,7 @@ body{
 #footer{
 	text-align: center;
 }
-#links a{
+#links a, #header a{
 	color: #FFF;
 	text-decoration: none;
 }
@@ -19,18 +32,12 @@ body{
 #links a:hover{
 	text-decoration: underline;
 }
-#header, #footer{
-	background: #FF9966;
-}
-#links{
-	background: #FF3300;
+#header, #footer, #links{
+	background: #3399ff;
+	color: #fff;
 }
 #frame{
 	padding: 10px;
-}
-h1,h3,h3{
-	margin-top: 2px;
-	margin-bottom: 2px;
 }
 a{
 	color: #333;
